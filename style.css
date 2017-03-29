@@ -1,0 +1,43 @@
+body {
+  font-family: arial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+html, body,
+#map-canvas {
+  height: 100%;
+}
+
+#outerdiv {
+  width: 100%;
+  height: 50%;
+  text-align: center
+}
+
+#map-canvas {
+  width: 100%;
+  height: 90%;
+  margin: 0px auto;
+  display: inline-block
+}
+
+#distance {
+  font-size: 200%;
+  padding-bottom: 10px;
+}
+
+.container p {
+  font-size: 150%;
+}
+
+#distance {
+  color: red;
+}
+
+.ui-autocomplete {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

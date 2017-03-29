@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="bootstrap.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/external/jquery/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="autocomplete.js"></script>
+    <script src="helper.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZeWGCmLBw1yx2cBPexOHrxTfSSqoTd_4&callback=initMap" async defer></script>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Foursquare Sample - Ramit Farwaha</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 align="center">Airport Recommendations!</h1>
+    </div>
+
+    <div align="center">
+<!--     FORM BEGINS -->
+
+      <form id="form_id" method="post" name="myform" class="navbar-form" role="search">
+        <div class="form-group">
+          <label for="tags">Departure Airport</label>
+          <div class="input-group">
+            <input type="text" id="tags" name="airport1" class="form-control" placeholder="IATA for Departure">
+          </div>
+
+          <label for="tags2">Arrival Airport:</label>
+          <div class="input-group">
+            <input type="text" id="tags2" name="airport2" class="form-control" placeholder="IATA for Arrival">
+          </div>
+          <br>
+          <br>
+<!--           Go to helper.js to compute results and display map on click -->
+          <div onclick="showResults()" id="submit" class="btn btn-default">Submit</div>
+          <button type="reset" class="btn btn-default" value="Reset">Reset</button>
+        </div>
+      </form>
+<!--       FORM ENDS  -->
+    </div>
+
+    <h3> Visualize your Route! </h3>
+    <div id="distance" align="center"></div>
+
+    <div id="outerdiv">
+      <div id="map-canvas"></div>
+    </div>
+
+    <h3>Explore These Recommended and Popular Venues </h3>
+    <div id="header">
+      <ul class="tabs">
+      </ul>
+    </div>
+
+  </body>
+  </html>
